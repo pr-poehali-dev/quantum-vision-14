@@ -46,18 +46,22 @@ export function PaymentRolesCard() {
               <p className="text-[#d4af37] font-semibold mb-2">Что входит в аттестацию</p>
               <ol className="space-y-2">
                 {[
-                  "Внутренний устав ВЧ",
-                  "Устав ВП",
-                  "ФЗ «О территориях с ограниченным доступом»",
-                  "ФЗ «Об оружии»",
-                  "ФЗ «О статусе военнослужащих и военной службе»",
-                  "Уголовный кодекс",
-                  "Федеральное постановление",
-                  "Правила и процесс задержания",
+                  { name: "Внутренний устав ВЧ", url: "https://forum.amazing-online.com/threads/vnutrennij-ustav-voinskoj-chasti-no9170174.1095912/" },
+                  { name: "Устав ВП", url: "https://forum.amazing-online.com/threads/ustav-voennoj-policii.1096028/" },
+                  { name: "ФЗ «О территориях с ограниченным доступом»", url: "https://forum.amazing-online.com/threads/zakon-nizhegorodskoj-oblasti-o-territorijax-s-ogranichennym-dostupom-no1-z.1096324/" },
+                  { name: "ФЗ «Об оружии»", url: "https://forum.amazing-online.com/threads/federalnyj-zakon-ob-oruzhii-no1-fz.1096278/" },
+                  { name: "ФЗ «О статусе военнослужащих и военной службе»", url: "https://forum.amazing-online.com/threads/federalnyj-zakon-o-voennoj-sluzhbe-i-statuse-voennosluzhaschego-no2-fz.1096279/" },
+                  { name: "Уголовный кодекс", url: "https://forum.amazing-online.com/threads/ugolovnyj-kodeks.1096328/" },
+                  { name: "Федеральное постановление", url: "https://forum.amazing-online.com/threads/federalnoe-postanovlenie.1096323/" },
+                  { name: "Правила и процесс задержания", url: null },
                 ].map((item, i) => (
                   <li key={i} className="flex gap-2">
                     <span className="text-[#d4af37] font-medium min-w-[20px]">{i + 1}.</span>
-                    <span>{item}</span>
+                    {item.url ? (
+                      <a href={item.url} target="_blank" rel="noopener noreferrer" className="text-[#eef4ff]/80 hover:text-[#d4af37] underline underline-offset-2 transition-colors">{item.name}</a>
+                    ) : (
+                      <span>{item.name}</span>
+                    )}
                   </li>
                 ))}
                 <li className="flex gap-2">

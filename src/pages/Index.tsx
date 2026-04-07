@@ -58,7 +58,7 @@ export default function Index() {
           {[
             { name: "Форум ВП", url: "https://forum.amazing-online.com/forums/voennaja-policija.1007/", icon: "🗂️" },
             { name: "Сайт военной полиции", url: "https://vk.cc/cwLwgZ", icon: "🌐" },
-            { name: "Таблица военной полиции", url: "https://docs.google.com/spreadsheets/d/1x7lXNSiqmXTKyT4FYOqlkpukbTldg0oUYMVe3t-hL5Y/edit?gid=0#gid=0", icon: "📊" },
+            { name: "Таблица военной полиции", url: "https://docs.google.com/spreadsheets/d/1VMvhiha8pNTcDB1beeQ9mKCHugGqm6g70Ls8LnKjxUk/edit?gid=0#gid=0", icon: "📊" },
             { name: "Таблица «Ревизии и поставки»", url: "https://vk.cc/cSJmXK", icon: "📋" },
             { name: "Запись на ревизию", url: "https://script.google.com/macros/s/AKfycbwdb4MV6V2CHnRSA190tCcwfXbqeJwZjQGOHdEOcw1t/dev", icon: "✍️" },
             { name: "Дискорд «Войсковая часть № 20115»", url: "https://vk.cc/cSJ2HP", icon: "💬" },

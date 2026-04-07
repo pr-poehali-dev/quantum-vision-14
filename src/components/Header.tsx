@@ -13,21 +13,15 @@ export function Header() {
         </div>
       </div>
 
-      <nav className="hidden md:flex items-center gap-8">
-        <a href="#signals" className="text-sm text-[#eef4ff]/60 hover:text-[#d4af37] transition-colors">
-          Специальные сигналы
-        </a>
-        <a href="#formations" className="text-sm text-[#eef4ff]/60 hover:text-[#d4af37] transition-colors">
-          Схемы построения
-        </a>
-        <a href="#sgu" className="text-sm text-[#eef4ff]/60 hover:text-[#d4af37] transition-colors">
-          Правила использования СГУ
-        </a>
+      <nav className="hidden md:flex items-center gap-6">
         <a href="#patrol" className="text-sm text-[#eef4ff]/60 hover:text-[#d4af37] transition-colors">
           Патрульная служба
         </a>
         <a href="#firstaid" className="text-sm text-[#eef4ff]/60 hover:text-[#d4af37] transition-colors">
-          Первая доврачебная помощь
+          Первая помощь
+        </a>
+        <a href="#tactics" className="text-sm text-[#eef4ff]/60 hover:text-[#d4af37] transition-colors">
+          Боевая подготовка
         </a>
       </nav>
 

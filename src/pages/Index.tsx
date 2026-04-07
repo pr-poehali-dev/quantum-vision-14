@@ -2,7 +2,9 @@ import { Header } from "@/components/Header"
 import { HeroSection } from "@/components/HeroSection"
 import { PartnersSection } from "@/components/PartnersSection"
 import { FeaturesSection } from "@/components/FeaturesSection"
+import { PatrolServiceSection } from "@/components/PatrolServiceSection"
 import { FirstAidSection } from "@/components/FirstAidSection"
+import { TacticsSection } from "@/components/TacticsSection"
 
 const commanders = [
   { rank: "Начальник военной полиции", name: "Майор Феофилов А.С.", contact: "тел. 380-800" },
@@ -50,7 +52,9 @@ export default function Index() {
         </div>
       </section>
 
+      <PatrolServiceSection />
       <FirstAidSection />
+      <TacticsSection />
 
       {/* Блок полезных ссылок */}
       <section className="px-4 md:px-8 py-12 max-w-6xl mx-auto">

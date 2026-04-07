@@ -4,10 +4,10 @@ import { PartnersSection } from "@/components/PartnersSection"
 import { FeaturesSection } from "@/components/FeaturesSection"
 
 const commanders = [
-  { rank: "Начальник военной полиции", name: "полковник Баранов С.В.", contact: "рация 112.3 / каб. 210" },
-  { rank: "Зам. по кадрам", name: "подполковник Соболев А.Д.", contact: "чт 10:00–13:00" },
-  { rank: "Старший инструктор", name: "мастер-прапорщик Воронин И.И.", contact: "рация 140.6" },
-  { rank: "Дежурный по части", name: "круглосуточно", contact: "+7 (495) 555-ВПЧ / рация 101" },
+  { rank: "Начальник военной полиции", name: "Майор Феофилов А.С.", contact: "тел. 380-800" },
+  { rank: "Зам. по БП", name: "Прапорщик Васильев Н.В.", contact: "тел. 826-755" },
+  { rank: "Старший инструктор", name: "Сол М.Н.", contact: "тел. 888-566" },
+  { rank: "Отдел кадров", name: "Прапорщик Макеева А.Д.", contact: "тел. 554-929" },
 ]
 
 export default function Index() {

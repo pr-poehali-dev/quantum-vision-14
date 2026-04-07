@@ -33,12 +33,9 @@ export function SendFundsCard() {
             <DialogTitle className="text-[#d4af37] text-xl">📞 Контакты командования и экстренная связь</DialogTitle>
           </DialogHeader>
           <ul className="space-y-3 text-sm text-[#eef4ff]/80 leading-relaxed">
-            <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span><span><span className="text-[#eef4ff] font-medium">Начальник военной полиции:</span> полковник Баранов С.В. — каб. 210, рация 112.3, внутр. 2101.</span></li>
-            <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span><span><span className="text-[#eef4ff] font-medium">Оперативный дежурный:</span> рация 101, тел. 8(495)555-8723.</span></li>
-            <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span><span><span className="text-[#eef4ff] font-medium">Инструкторский состав:</span> старший инструктор Воронин И.И. — рация 140.6.</span></li>
-            <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span><span><span className="text-[#eef4ff] font-medium">Отдел кадров:</span> подполковник Соболев А.Д., часы приёма: чт 10–13.</span></li>
-            <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span><span><span className="text-[#eef4ff] font-medium">Горячая линия доверия:</span> 8-800-555-ВПЧ (анонимно).</span></li>
-            <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span><span><span className="text-[#eef4ff] font-medium">Официальный канал:</span> <span className="text-[#d4af37] font-semibold">@milpol_voinskaya_chast</span></span></li>
+            <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span><span><span className="text-[#eef4ff] font-medium">Начальник военной полиции:</span> Майор Феофилов А.С. — тел. 380-800.</span></li>
+            <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span><span><span className="text-[#eef4ff] font-medium">Инструкторский состав:</span> Старший инструктор Сол М.Н. — тел. 888-566.</span></li>
+            <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span><span><span className="text-[#eef4ff] font-medium">Отдел кадров:</span> Прапорщик Макеева А.Д. — тел. 554-929.</span></li>
           </ul>
         </DialogContent>
       </Dialog>

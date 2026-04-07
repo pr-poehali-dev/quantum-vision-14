@@ -33,12 +33,9 @@ export function LinkAccountsCard() {
             <DialogTitle className="text-[#d4af37] text-xl">📑 Ревизии — полная информация</DialogTitle>
           </DialogHeader>
           <ul className="space-y-3 text-sm text-[#eef4ff]/80 leading-relaxed">
-            <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span>Плановые ревизии: каждый вторник и четверг с 09:00 до 12:00.</li>
-            <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span>Внеплановые: по приказу командования.</li>
-            <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span>Проверке подлежат: оружейная комната, документация, технические средства, вещевое имущество.</li>
-            <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span>Инструкции по проведению ревизии доступны в кабинете №105 у старшины.</li>
+            <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span>Плановые ревизии: каждый день с 10:00 до 22:00.</li>
+            <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span>Проверке подлежат: оружейные склады государственных организаций.</li>
             <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span>По итогам ревизии составляется акт и отправляется в штаб.</li>
-            <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span><span>Следующая общая ревизия — <span className="text-[#d4af37] font-semibold">15.11.2025</span>, явка обязательна.</span></li>
           </ul>
         </DialogContent>
       </Dialog>

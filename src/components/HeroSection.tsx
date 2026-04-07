@@ -7,7 +7,7 @@ export function HeroSection() {
           src="https://cdn.poehali.dev/projects/24127d0a-2ecc-4750-a8e2-dd310649bbf8/bucket/c124b3d6-21a6-458f-8877-cc8b5aa4626a.jpg"
           alt="Эмблема Военной полиции"
           className="relative h-44 w-44 md:h-56 md:w-56 object-contain drop-shadow-2xl"
-          style={{ filter: "drop-shadow(0 0 24px rgba(212,175,55,0.35))" }}
+          style={{ filter: "drop-shadow(0 0 24px rgba(212,175,55,0.35))", mixBlendMode: "screen" }}
         />
       </div>
 

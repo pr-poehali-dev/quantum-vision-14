@@ -34,7 +34,7 @@ export function PaymentRolesCard() {
           </DialogHeader>
           <div className="space-y-4 text-sm text-[#eef4ff]/80 leading-relaxed">
             <div>
-              <p className="text-[#d4af37] font-semibold mb-2">Аттестация для повышения на старшин</p>
+              <p className="text-[#d4af37] font-semibold mb-2">Правила прохождения</p>
               <ul className="space-y-2">
                 <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span>Срок на сдачу: <span className="text-[#eef4ff] font-medium">5 дней</span>.</li>
                 <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span>Допускается не более <span className="text-[#eef4ff] font-medium">5 ошибок</span> на все вопросы.</li>
@@ -44,12 +44,27 @@ export function PaymentRolesCard() {
             </div>
             <div className="border-t border-[#d4af37]/20 pt-3">
               <p className="text-[#d4af37] font-semibold mb-2">Что входит в аттестацию</p>
-              <ul className="space-y-2">
-                <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span>Внутренний устав Воинской части</li>
-                <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span>Устав Военной полиции</li>
-                <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span>Нормативные документы и приказы</li>
-                <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span>Практические навыки несения службы</li>
-              </ul>
+              <ol className="space-y-2">
+                {[
+                  "Внутренний устав ВЧ",
+                  "Устав ВП",
+                  "ФЗ «О территориях с ограниченным доступом»",
+                  "ФЗ «Об оружии»",
+                  "ФЗ «О статусе военнослужащих и военной службе»",
+                  "Уголовный кодекс",
+                  "Федеральное постановление",
+                  "Правила и процесс задержания",
+                ].map((item, i) => (
+                  <li key={i} className="flex gap-2">
+                    <span className="text-[#d4af37] font-medium min-w-[20px]">{i + 1}.</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+                <li className="flex gap-2">
+                  <span className="text-[#d4af37] font-medium min-w-[20px]">9.</span>
+                  <span>Проверка на знание приказов Генерала <span className="text-[#d4af37]/60 text-xs">(в разработке)</span></span>
+                </li>
+              </ol>
             </div>
           </div>
         </DialogContent>

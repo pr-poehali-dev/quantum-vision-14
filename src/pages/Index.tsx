@@ -44,7 +44,7 @@ export default function Index() {
           </table>
           <div className="px-6 py-4 border-t border-[#d4af37]/20 flex items-center gap-2">
             <span className="text-lg">⚡</span>
-            <span className="text-sm text-[#eef4ff]/60">Для срочных вопросов — командный канал связи <span className="text-[#d4af37] font-semibold">«Форпост»</span></span>
+            <span className="text-sm text-[#eef4ff]/60">Для срочных вопросов — командный канал связи <span className="text-[#d4af37] font-semibold">FIRE | Войсковая часть 20115</span></span>
           </div>
         </div>
       </section>

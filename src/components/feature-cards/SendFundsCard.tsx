@@ -1,65 +1,47 @@
-import { Zap, Building2, ChevronDown, Info } from "lucide-react"
-import { Switch } from "@/components/ui/switch"
-import { ArrowUpRight } from "lucide-react"
+import { useState } from "react"
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+import { Button } from "@/components/ui/button"
 
 export function SendFundsCard() {
+  const [open, setOpen] = useState(false)
+
   return (
-    <div className="rounded-2xl bg-[#141414] border border-[#262626] p-6 flex flex-col">
-      <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-[#1f1f1f] border border-[#2a2a2a]">
-        <Zap className="h-5 w-5 text-gray-400" />
-      </div>
-
-      <h3 className="mb-2 text-lg font-semibold text-white">Мгновенные переводы</h3>
-      <p className="mb-4 text-sm text-gray-400">Платите клиентам, партнёрам и поставщикам за секунды без задержек</p>
-
-      <a href="#" className="mb-6 inline-flex items-center text-sm text-gray-400 hover:text-white transition-colors">
-        Подробнее <ArrowUpRight className="ml-1 h-4 w-4" />
-      </a>
-
-      <div className="mt-auto space-y-4 rounded-xl bg-[#1a1a1a] border border-[#262626] p-4">
-        <div className="flex items-center justify-between rounded-lg bg-[#0f0f0f] border border-[#262626] px-3 py-2.5">
-          <div className="flex items-center gap-3">
-            <Building2 className="h-5 w-5 text-gray-500" />
-            <div>
-              <p className="text-sm font-medium text-white">Операционный счёт</p>
-              <p className="text-xs text-gray-500">Доступно: 1 500 000 ₽</p>
-            </div>
-          </div>
-          <ChevronDown className="h-4 w-4 text-gray-500" />
+    <>
+      <div className="card-military p-6 flex flex-col gap-4">
+        <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-[#d4af37]/10 border border-[#d4af37]/30 text-3xl">
+          📞
         </div>
 
         <div>
-          <label className="mb-2 flex items-center gap-1 text-xs text-gray-400">
-            Введите сумму <Info className="h-3 w-3" />
-          </label>
-          <div className="flex items-center rounded-lg bg-[#0f0f0f] border border-[#262626] px-3 py-2.5">
-            <span className="text-gray-500 mr-2">₽</span>
-            <input
-              type="text"
-              placeholder="0,00"
-              className="flex-1 bg-transparent text-white placeholder-gray-600 outline-none text-sm"
-            />
-          </div>
+          <h3 className="text-xl font-bold text-[#eef4ff] mb-2">Контакты</h3>
+          <p className="text-sm text-[#eef4ff]/55 leading-relaxed">
+            Командование и инструкторы
+          </p>
         </div>
 
-        <div>
-          <label className="mb-2 flex items-center gap-1 text-xs text-gray-400">
-            Назначение платежа <span className="text-violet-400">*</span> (Необязательно)
-          </label>
-          <div className="relative">
-            <textarea
-              placeholder="Сообщение для получателя..."
-              className="w-full rounded-lg bg-[#0f0f0f] border border-[#262626] px-3 py-2.5 text-sm text-white placeholder-gray-600 outline-none resize-none h-16"
-            />
-            <span className="absolute bottom-2 right-2 text-xs text-gray-600">0/200</span>
-          </div>
-        </div>
-
-        <div className="flex items-center justify-between pt-2">
-          <Switch className="data-[state=checked]:bg-violet-600" />
-          <span className="text-sm text-gray-400">Регулярный платёж</span>
-        </div>
+        <Button
+          onClick={() => setOpen(true)}
+          className="mt-auto w-full bg-[#d4af37] text-[#0f1a24] font-semibold hover:bg-[#c9a227] gold-glow-hover transition-all"
+        >
+          Подробнее
+        </Button>
       </div>
-    </div>
+
+      <Dialog open={open} onOpenChange={setOpen}>
+        <DialogContent className="card-military border-[#d4af37]/50 text-[#eef4ff] max-w-lg">
+          <DialogHeader>
+            <DialogTitle className="text-[#d4af37] text-xl">📞 Контакты командования и экстренная связь</DialogTitle>
+          </DialogHeader>
+          <ul className="space-y-3 text-sm text-[#eef4ff]/80 leading-relaxed">
+            <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span><span><span className="text-[#eef4ff] font-medium">Начальник военной полиции:</span> полковник Баранов С.В. — каб. 210, рация 112.3, внутр. 2101.</span></li>
+            <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span><span><span className="text-[#eef4ff] font-medium">Оперативный дежурный:</span> рация 101, тел. 8(495)555-8723.</span></li>
+            <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span><span><span className="text-[#eef4ff] font-medium">Инструкторский состав:</span> старший инструктор Воронин И.И. — рация 140.6.</span></li>
+            <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span><span><span className="text-[#eef4ff] font-medium">Отдел кадров:</span> подполковник Соболев А.Д., часы приёма: чт 10–13.</span></li>
+            <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span><span><span className="text-[#eef4ff] font-medium">Горячая линия доверия:</span> 8-800-555-ВПЧ (анонимно).</span></li>
+            <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span><span><span className="text-[#eef4ff] font-medium">Официальный канал:</span> <span className="text-[#d4af37] font-semibold">@milpol_voinskaya_chast</span></span></li>
+          </ul>
+        </DialogContent>
+      </Dialog>
+    </>
   )
 }

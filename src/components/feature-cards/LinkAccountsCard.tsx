@@ -1,60 +1,47 @@
-import { Building2, ArrowUpRight, Plus } from "lucide-react"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { useState } from "react"
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
 
-const recipients = [
-  { name: "Алексей Петров", info: "alexey@finpotok.ru", code: "P-52112", image: "/professional-man-portrait.png" },
-  { name: "Мария Иванова", info: "+7 (495) 123-45-67", code: "P-52132", image: "/professional-woman-portrait.png" },
-  { name: "Елена Смирнова", info: "elena@finpotok.ru", code: "P-52184", initials: "ЕС", color: "bg-teal-600" },
-  { name: "Дмитрий Козлов", info: "+7 (812) 987-65-43", code: "P-52114", initials: "ДК", color: "bg-amber-600" },
-]
-
 export function LinkAccountsCard() {
+  const [open, setOpen] = useState(false)
+
   return (
-    <div className="rounded-2xl bg-[#141414] border border-[#262626] p-6 flex flex-col">
-      <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-[#1f1f1f] border border-[#2a2a2a]">
-        <Building2 className="h-5 w-5 text-gray-400" />
-      </div>
+    <>
+      <div className="card-military p-6 flex flex-col gap-4">
+        <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-[#d4af37]/10 border border-[#d4af37]/30 text-3xl">
+          📋
+        </div>
 
-      <h3 className="mb-2 text-lg font-semibold text-white">Объедините все счета</h3>
-      <p className="mb-4 text-sm text-gray-400">Подключите банки, кошельки и карты, чтобы видеть все балансы в одном окне</p>
-
-      <a href="#" className="mb-6 inline-flex items-center text-sm text-gray-400 hover:text-white transition-colors">
-        Подробнее <ArrowUpRight className="ml-1 h-4 w-4" />
-      </a>
-
-      <div className="mt-auto space-y-2 rounded-xl bg-[#1a1a1a] border border-[#262626] p-3">
-        {recipients.map((recipient, index) => (
-          <div key={index} className="flex items-center justify-between rounded-lg bg-[#0f0f0f] px-3 py-2">
-            <div className="flex items-center gap-3">
-              <Avatar className="h-9 w-9">
-                {recipient.image ? (
-                  <AvatarImage src={recipient.image || "/placeholder.svg"} alt={recipient.name} />
-                ) : null}
-                <AvatarFallback className={`${recipient.color || "bg-gray-600"} text-white text-xs`}>
-                  {recipient.initials ||
-                    recipient.name
-                      .split(" ")
-                      .map((n) => n[0])
-                      .join("")}
-                </AvatarFallback>
-              </Avatar>
-              <div>
-                <p className="text-sm font-medium text-white">{recipient.name}</p>
-                <p className="text-xs text-gray-500">{recipient.info}</p>
-              </div>
-            </div>
-            <span className="text-xs text-gray-500">{recipient.code}</span>
-          </div>
-        ))}
+        <div>
+          <h3 className="text-xl font-bold text-[#eef4ff] mb-2">Ревизии</h3>
+          <p className="text-sm text-[#eef4ff]/55 leading-relaxed">
+            Расписание и инструкции по проведению
+          </p>
+        </div>
 
         <Button
-          variant="ghost"
-          className="w-full justify-center text-gray-500 hover:text-white hover:bg-[#1f1f1f] mt-2"
+          onClick={() => setOpen(true)}
+          className="mt-auto w-full bg-[#d4af37] text-[#0f1a24] font-semibold hover:bg-[#c9a227] gold-glow-hover transition-all"
         >
-          <Plus className="mr-2 h-4 w-4" /> Новый получатель
+          Подробнее
         </Button>
       </div>
-    </div>
+
+      <Dialog open={open} onOpenChange={setOpen}>
+        <DialogContent className="card-military border-[#d4af37]/50 text-[#eef4ff] max-w-lg">
+          <DialogHeader>
+            <DialogTitle className="text-[#d4af37] text-xl">📑 Ревизии — полная информация</DialogTitle>
+          </DialogHeader>
+          <ul className="space-y-3 text-sm text-[#eef4ff]/80 leading-relaxed">
+            <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span>Плановые ревизии: каждый вторник и четверг с 09:00 до 12:00.</li>
+            <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span>Внеплановые: по приказу командования.</li>
+            <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span>Проверке подлежат: оружейная комната, документация, технические средства, вещевое имущество.</li>
+            <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span>Инструкции по проведению ревизии доступны в кабинете №105 у старшины.</li>
+            <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span>По итогам ревизии составляется акт и отправляется в штаб.</li>
+            <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span><span>Следующая общая ревизия — <span className="text-[#d4af37] font-semibold">15.11.2025</span>, явка обязательна.</span></li>
+          </ul>
+        </DialogContent>
+      </Dialog>
+    </>
   )
 }

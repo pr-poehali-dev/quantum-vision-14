@@ -1,51 +1,37 @@
-import { ChevronDown } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Shield } from "lucide-react"
 
 export function Header() {
   return (
-    <header className="flex items-center justify-between px-8 py-4">
-      <div className="flex items-center gap-2">
-        <ФинПотокLogo />
-        <span className="text-lg font-semibold text-white">
-          ФинПоток<sup className="text-xs">™</sup>
-        </span>
+    <header className="flex items-center justify-between px-8 py-4 border-b border-[#d4af37]/20">
+      <div className="flex items-center gap-3">
+        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#d4af37]/10 border border-[#d4af37]/40">
+          <Shield className="h-5 w-5 text-[#d4af37]" />
+        </div>
+        <div>
+          <span className="text-base font-bold text-[#eef4ff] tracking-wide">AMAZING FIRE</span>
+          <p className="text-xs text-[#d4af37]/70 leading-none">Военная полиция</p>
+        </div>
       </div>
 
       <nav className="hidden md:flex items-center gap-8">
-        <a href="#" className="text-sm text-gray-300 hover:text-white transition-colors">
-          Продукты
+        <a href="#" className="text-sm text-[#eef4ff]/60 hover:text-[#d4af37] transition-colors">
+          Ревизии
         </a>
-        <a href="#" className="text-sm text-gray-300 hover:text-white transition-colors flex items-center gap-1">
-          Решения <ChevronDown className="h-4 w-4" />
+        <a href="#" className="text-sm text-[#eef4ff]/60 hover:text-[#d4af37] transition-colors">
+          Аттестация
         </a>
-        <a href="#" className="text-sm text-gray-300 hover:text-white transition-colors">
-          Ресурсы
+        <a href="#" className="text-sm text-[#eef4ff]/60 hover:text-[#d4af37] transition-colors">
+          Командование
         </a>
-        <a href="#" className="text-sm text-gray-300 hover:text-white transition-colors">
-          Тарифы
-        </a>
-        <a href="#" className="text-sm text-gray-300 hover:text-white transition-colors">
+        <a href="#" className="text-sm text-[#eef4ff]/60 hover:text-[#d4af37] transition-colors">
           Контакты
         </a>
       </nav>
 
-      <Button
-        variant="outline"
-        className="rounded-full border-violet-500 text-violet-400 hover:bg-violet-500/10 hover:text-violet-300 bg-transparent"
-      >
-        Запросить демо
-      </Button>
+      <div className="flex items-center gap-2 rounded-full border border-[#d4af37]/40 bg-[#d4af37]/10 px-4 py-1.5">
+        <span className="h-2 w-2 rounded-full bg-green-400 animate-pulse"></span>
+        <span className="text-xs text-[#d4af37] font-medium">Фракция «Воинская часть»</span>
+      </div>
     </header>
-  )
-}
-
-function ФинПотокLogo() {
-  return (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="8" cy="8" r="3" fill="#8B5CF6" />
-      <circle cx="16" cy="8" r="3" fill="#8B5CF6" opacity="0.6" />
-      <circle cx="8" cy="16" r="3" fill="#8B5CF6" opacity="0.6" />
-      <circle cx="16" cy="16" r="3" fill="#8B5CF6" opacity="0.4" />
-    </svg>
   )
 }

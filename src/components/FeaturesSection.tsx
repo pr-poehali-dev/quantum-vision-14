@@ -4,8 +4,8 @@ import { SendFundsCard } from "@/components/feature-cards/SendFundsCard"
 
 export function FeaturesSection() {
   return (
-    <section className="px-4 md:px-8 py-8">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
+    <section className="px-4 md:px-8 py-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
         <LinkAccountsCard />
         <PaymentRolesCard />
         <SendFundsCard />

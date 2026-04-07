@@ -49,6 +49,35 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Блок полезных ссылок */}
+      <section className="px-4 md:px-8 py-12 max-w-6xl mx-auto">
+        <h2 className="text-2xl font-bold text-[#eef4ff] mb-2 text-center">Полезные ссылки</h2>
+        <p className="text-[#d4af37]/60 text-sm text-center mb-8 uppercase tracking-widest">Актуальные ресурсы</p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          {[
+            { name: "Форум ВП", url: "https://forum.amazing-online.com/forums/voennaja-policija.1007/", icon: "🗂️" },
+            { name: "Сайт военной полиции", url: "https://vk.cc/cwLwgZ", icon: "🌐" },
+            { name: "Таблица военной полиции", url: "https://docs.google.com/spreadsheets/d/1x7lXNSiqmXTKyT4FYOqlkpukbTldg0oUYMVe3t-hL5Y/edit?gid=0#gid=0", icon: "📊" },
+            { name: "Таблица «Ревизии и поставки»", url: "https://vk.cc/cSJmXK", icon: "📋" },
+            { name: "Запись на ревизию", url: "https://script.google.com/macros/s/AKfycbwdb4MV6V2CHnRSA190tCcwfXbqeJwZjQGOHdEOcw1t/dev", icon: "✍️" },
+            { name: "Дискорд «Войсковая часть № 20115»", url: "https://vk.cc/cSJ2HP", icon: "💬" },
+            { name: "Флудилка воинской части", url: "https://vk.cc/cSJ2Et", icon: "📢" },
+          ].map((link) => (
+            <a
+              key={link.name}
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="card-military p-4 flex items-center gap-3 hover:bg-[#d4af37]/5 transition-colors group"
+            >
+              <span className="text-2xl">{link.icon}</span>
+              <span className="text-sm text-[#eef4ff]/80 group-hover:text-[#d4af37] transition-colors">{link.name}</span>
+            </a>
+          ))}
+        </div>
+      </section>
+
       <footer className="py-8 text-center border-t border-[#d4af37]/15">
         <p className="text-sm text-[#eef4ff]/40">
           © 2025 Военная полиция фракции «Воинская часть» | Официальный портал для личного состава | Версия 1.11

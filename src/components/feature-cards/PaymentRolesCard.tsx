@@ -32,14 +32,26 @@ export function PaymentRolesCard() {
           <DialogHeader>
             <DialogTitle className="text-[#d4af37] text-xl">🎖️ Аттестация — порядок и требования</DialogTitle>
           </DialogHeader>
-          <ul className="space-y-3 text-sm text-[#eef4ff]/80 leading-relaxed">
-            <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span>Этапы: теория (устав ВП), физическая подготовка (КФП), стрельбы, тактическая подготовка.</li>
-            <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span>Расписание аттестации: 1-я и 3-я пятница месяца, 10:00, учебный корпус.</li>
-            <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span>Допуск: по допуску врача и сдача зачётов по ОКП.</li>
-            <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span>Срок действия аттестации — 1 год, после переаттестация.</li>
-            <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span>Для сдачи необходимо предъявить жетон и форму одежды ВП.</li>
-            <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span><span>Консультации с инструкторами по вторникам в <span className="text-[#d4af37] font-semibold">16:00</span>.</span></li>
-          </ul>
+          <div className="space-y-4 text-sm text-[#eef4ff]/80 leading-relaxed">
+            <div>
+              <p className="text-[#d4af37] font-semibold mb-2">Аттестация для повышения на старшин</p>
+              <ul className="space-y-2">
+                <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span>Срок на сдачу: <span className="text-[#eef4ff] font-medium">5 дней</span>.</li>
+                <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span>Допускается не более <span className="text-[#eef4ff] font-medium">5 ошибок</span> на все вопросы.</li>
+                <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span>При провале — <span className="text-[#eef4ff] font-medium">2 дня</span> на пересдачу.</li>
+                <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span>После второго провала — перевод в <span className="text-[#eef4ff] font-medium">РМТО/ДШР</span>.</li>
+              </ul>
+            </div>
+            <div className="border-t border-[#d4af37]/20 pt-3">
+              <p className="text-[#d4af37] font-semibold mb-2">Что входит в аттестацию</p>
+              <ul className="space-y-2">
+                <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span>Внутренний устав Воинской части</li>
+                <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span>Устав Военной полиции</li>
+                <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span>Нормативные документы и приказы</li>
+                <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span>Практические навыки несения службы</li>
+              </ul>
+            </div>
+          </div>
         </DialogContent>
       </Dialog>
     </>

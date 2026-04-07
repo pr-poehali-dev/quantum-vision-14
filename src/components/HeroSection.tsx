@@ -21,7 +21,7 @@ export function HeroSection() {
 
       <div className="mt-8 flex items-center gap-3 rounded-2xl border border-[#d4af37]/20 bg-[#0f1a24]/80 px-6 py-3">
         <span className="text-2xl">⚡</span>
-        <span className="text-sm text-[#eef4ff]/70">Командный канал связи: <span className="text-[#d4af37] font-semibold">«Форпост»</span></span>
+        <span className="text-sm text-[#eef4ff]/70">Командный канал связи: <span className="text-[#d4af37] font-semibold">FIRE | Войсковая часть 20115</span></span>
       </div>
     </section>
   )

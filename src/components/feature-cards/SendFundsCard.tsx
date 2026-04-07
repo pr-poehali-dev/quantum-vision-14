@@ -36,7 +36,7 @@ export function SendFundsCard() {
             {[
               { role: "Начальник военной полиции", name: "Майор Феофилов А.С.", phone: "тел. 380-800", vk: "https://vk.com/nulifaerxex" },
               { role: "Зам. по БП", name: "Прапорщик Васильев Н.В.", phone: "тел. 826-755", vk: "https://vk.com/kolian2931" },
-              { role: "Старший инструктор", name: "Сол М.Н.", phone: "тел. 888-566", vk: "https://vk.com/nepupok" },
+              { role: "Старший инструктор", name: "Прапорщик Сол М.Н.", phone: "тел. 888-566", vk: "https://vk.com/nepupok" },
               { role: "Отдел кадров", name: "Прапорщик Макеева А.Д.", phone: "тел. 554-929", vk: "https://vk.com/alopes2" },
             ].map((c) => (
               <li key={c.name} className="flex gap-2">

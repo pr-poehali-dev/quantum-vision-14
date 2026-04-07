@@ -6,7 +6,7 @@ import { FeaturesSection } from "@/components/FeaturesSection"
 const commanders = [
   { rank: "Начальник военной полиции", name: "Майор Феофилов А.С.", contact: "тел. 380-800" },
   { rank: "Зам. по БП", name: "Прапорщик Васильев Н.В.", contact: "тел. 826-755" },
-  { rank: "Старший инструктор", name: "Сол М.Н.", contact: "тел. 888-566" },
+  { rank: "Старший инструктор", name: "Прапорщик Сол М.Н.", contact: "тел. 888-566" },
   { rank: "Отдел кадров", name: "Прапорщик Макеева А.Д.", contact: "тел. 554-929" },
 ]
 

@@ -32,10 +32,22 @@ export function SendFundsCard() {
           <DialogHeader>
             <DialogTitle className="text-[#d4af37] text-xl">📞 Контакты командования и экстренная связь</DialogTitle>
           </DialogHeader>
-          <ul className="space-y-3 text-sm text-[#eef4ff]/80 leading-relaxed">
-            <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span><span><span className="text-[#eef4ff] font-medium">Начальник военной полиции:</span> Майор Феофилов А.С. — тел. 380-800.</span></li>
-            <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span><span><span className="text-[#eef4ff] font-medium">Инструкторский состав:</span> Старший инструктор Сол М.Н. — тел. 888-566.</span></li>
-            <li className="flex gap-2"><span className="text-[#d4af37] mt-0.5">•</span><span><span className="text-[#eef4ff] font-medium">Отдел кадров:</span> Прапорщик Макеева А.Д. — тел. 554-929.</span></li>
+          <ul className="space-y-4 text-sm text-[#eef4ff]/80 leading-relaxed">
+            {[
+              { role: "Начальник военной полиции", name: "Майор Феофилов А.С.", phone: "тел. 380-800", vk: "https://vk.com/nulifaerxex" },
+              { role: "Зам. по БП", name: "Прапорщик Васильев Н.В.", phone: "тел. 826-755", vk: "https://vk.com/kolian2931" },
+              { role: "Старший инструктор", name: "Сол М.Н.", phone: "тел. 888-566", vk: "https://vk.com/nepupok" },
+              { role: "Отдел кадров", name: "Прапорщик Макеева А.Д.", phone: "тел. 554-929", vk: "https://vk.com/alopes2" },
+            ].map((c) => (
+              <li key={c.name} className="flex gap-2">
+                <span className="text-[#d4af37] mt-0.5">•</span>
+                <span>
+                  <span className="text-[#eef4ff] font-medium">{c.role}:</span> {c.name} — {c.phone}
+                  {" · "}
+                  <a href={c.vk} target="_blank" rel="noopener noreferrer" className="text-[#d4af37] hover:underline">ВКонтакте</a>
+                </span>
+              </li>
+            ))}
           </ul>
         </DialogContent>
       </Dialog>
